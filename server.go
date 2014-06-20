@@ -1718,7 +1718,7 @@ func (srv *Server) Serve(l net.Listener) error {
 			continue
 		}
 		c.setState(c.rwc, StateNew) // before Serve can return
-		go c.serve()
+		c.serve()
 	}
 }
 
